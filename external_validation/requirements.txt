@@ -1,0 +1,5 @@
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+huggingface_hub>=0.25
+zstandard>=0.22

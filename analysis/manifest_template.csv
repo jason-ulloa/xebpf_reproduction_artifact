@@ -1,0 +1,3 @@
+host,workload,label,rep,events_jsonl
+E1,benign-file-v1,0,1,/path/to/E1/benign-file-v1/R01/events.jsonl
+E1,ae-file-churn-v1,1,1,/path/to/E1/ae-file-churn-v1/R01/events.jsonl

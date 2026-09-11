@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated article and this software release."
+title: "XEBPF Reproduction Artifact: Environment or Behavior?"
+type: software
+authors:
+  - family-names: "Ulloa Hernández"
+    given-names: "Jason"
+    orcid: "https://orcid.org/0009-0003-0445-6697"
+version: "1.0.0"
+date-released: "2026-09-10"
+license: MIT
+repository-code: "https://github.com/jason-ulloa/xebpf_reproduction_artifact"
+keywords:
+  - eBPF
+  - host intrusion detection
+  - distribution shift
+  - Linux
+  - reproducibility

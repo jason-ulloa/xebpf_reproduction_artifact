@@ -1,0 +1,52 @@
+#!/usr/bin/env bpftrace
+
+/*
+ * $1 = target UID. 4294967295 means system-wide.
+ */
+
+BEGIN
+{
+  printf("READY\t0\t0\t0\t-\t-\n");
+}
+
+tracepoint:syscalls:sys_enter_execve
+/$1 == 4294967295 || uid == $1/
+{
+  printf("PROCESS_EXEC\t%llu\t%d\t%d\t%s\t%s\n",
+         nsecs, pid, uid, comm, str(args->filename));
+}
+
+tracepoint:sched:sched_process_exit
+/$1 == 4294967295 || uid == $1/
+{
+  printf("PROCESS_EXIT\t%llu\t%d\t%d\t%s\t-\n",
+         nsecs, pid, uid, comm);
+}
+
+tracepoint:syscalls:sys_enter_openat
+/$1 == 4294967295 || uid == $1/
+{
+  printf("FILE_OPEN\t%llu\t%d\t%d\t%s\t%s\n",
+         nsecs, pid, uid, comm, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_unlinkat
+/$1 == 4294967295 || uid == $1/
+{
+  printf("FILE_DELETE\t%llu\t%d\t%d\t%s\t%s\n",
+         nsecs, pid, uid, comm, str(args->pathname));
+}
+
+tracepoint:syscalls:sys_enter_connect
+/$1 == 4294967295 || uid == $1/
+{
+  printf("NET_CONNECT\t%llu\t%d\t%d\t%s\t-\n",
+         nsecs, pid, uid, comm);
+}
+
+tracepoint:syscalls:sys_enter_accept4
+/$1 == 4294967295 || uid == $1/
+{
+  printf("NET_ACCEPT\t%llu\t%d\t%d\t%s\t-\n",
+         nsecs, pid, uid, comm);
+}
