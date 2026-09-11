@@ -134,6 +134,7 @@ See `external_validation/README.md`.
 
 - Software release: `1.0.0`
 - Repository: `https://github.com/jason-ulloa/xebpf_reproduction_artifact`
+- Archived release DOI: `10.5281/zenodo.22699421`
 - License: MIT
 - Author: Jason Ulloa Hernández
 - ORCID: `0009-0003-0445-6697`

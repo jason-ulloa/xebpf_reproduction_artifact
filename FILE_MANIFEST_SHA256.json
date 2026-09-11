@@ -11,8 +11,8 @@
   },
   {
     "path": "CITATION.cff",
-    "bytes": 555,
-    "sha256": "ea62adee15b12b7cbdd5959e2daf79e8418db20c8c78b66478ac220d34522e1f"
+    "bytes": 586,
+    "sha256": "54f5c10cff75858b84114e2ea7a862062924ac172427fadae49cad226e203eb5"
   },
   {
     "path": "LICENSE",
@@ -20,9 +20,14 @@
     "sha256": "bbbf27fde7ee39f057cea228e355ff1391870f9539b1708f9e5af1da29b7a12b"
   },
   {
+    "path": "POST_RELEASE_METADATA.md",
+    "bytes": 423,
+    "sha256": "df7ba68f9fa68d98e1fa76926879bba1196434a6e8b29e01542ec64b4a61dc3a"
+  },
+  {
     "path": "README.md",
-    "bytes": 4776,
-    "sha256": "991d7b3e0ee9ddbbdf8277c91a0b1ac9bc7c2bf4b70967f2841a85f4de432f26"
+    "bytes": 4826,
+    "sha256": "29493a9ee11ca9df2ad22084dde33d1549f13908463e082465b4f2cc955a0e40"
   },
   {
     "path": "RELEASE_NOTES.md",
